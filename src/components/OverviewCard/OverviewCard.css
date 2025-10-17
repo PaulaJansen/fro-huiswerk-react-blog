@@ -1,0 +1,13 @@
+.card-wrapper {
+    background-color: var(--color-white);
+    padding: 2rem;
+    width: 30vw;
+}
+
+.card-author {
+    color: var(--color-secondary);
+}
+
+.card-info {
+    color: var(--color-secondary);
+}

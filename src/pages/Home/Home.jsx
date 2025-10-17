@@ -1,8 +1,11 @@
 import './Home.css';
+import logo from "../../assets/logo-white.png";
 
 function Home() {
     return (
-        <h2>Home</h2>
+        <div className="home-wrapper">
+            <img className="logo" src={logo} alt="Company logo"/>
+        </div>
     )
 }
 

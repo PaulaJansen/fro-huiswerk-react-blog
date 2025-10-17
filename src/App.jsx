@@ -1,12 +1,13 @@
 import './App.css';
-import logo from './assets/logo-white.png';
 import menuLogo from './assets/logo-medium.png';
-import {NavLink, Route, Routes} from 'react-router-dom';
+import footerLogo from './assets/logo-small.png';
+import { Route, Routes} from 'react-router-dom';
 import Home from './pages/Home/Home.jsx';
 import OverviewBlogs from './pages/OverviewBlogs/OverviewBlogs.jsx';
 import NewBlog from './pages/NewBlog/NewBlog.jsx';
 import Error from './pages/Error/Error.jsx';
 import BlogPost from "./pages/BlogPost/BlogPost.jsx";
+import NavLinkItem from "./components/NavLink/NavLinkItem.jsx";
 
 function App() {
     return (
@@ -14,18 +15,11 @@ function App() {
             <nav className="navbar">
                 <img className="navbar-image" src={menuLogo} alt="Company logo"/>
                 <ul className="navbar-menu">
-                    <li>
-                        <NavLink className={({isActive}) => isActive ? "nav-item-active" : "nav-item-default"} to="/">Home</NavLink>
-                    </li>
-                    <li>
-                        <NavLink className={({isActive}) => isActive ? "nav-item-active" : "nav-item-default"} to="/overview">Overview blogs</NavLink>
-                    </li>
-                    <li>
-                        <NavLink className={({isActive}) => isActive ? "nav-item-active" : "nav-item-default"} to="/new-blog">New blog</NavLink>
-                    </li>
+                        <NavLinkItem to={"/"} title="Home" />
+                        <NavLinkItem to={"/overview"} title="Alle blogs" />
+                        <NavLinkItem to={"/new-blog"} title="Nieuwe blog" />
                 </ul>
             </nav>
-            <img className="logo" src={logo} alt="Company logo"/>
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/overview" element={<OverviewBlogs/>}/>
@@ -33,6 +27,9 @@ function App() {
                 <Route path="/error" element={<Error/>}/>
                 <Route path="/blogpost/:id" element={<BlogPost/>}/>
             </Routes>
+            <footer className="footer">
+                <img src={footerLogo} alt="Logo" className="footer-logo"/>
+            </footer>
         </div>
     )
 }

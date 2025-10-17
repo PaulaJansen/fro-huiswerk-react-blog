@@ -1,0 +1,11 @@
+.nav-item-default {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-item-active {
+    color: var(--color-primary);
+    text-decoration: underline;
+    font-weight: 600;
+}
