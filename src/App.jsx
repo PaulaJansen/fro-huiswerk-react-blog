@@ -8,6 +8,7 @@ import NewBlog from './pages/NewBlog/NewBlog.jsx';
 import Error from './pages/Error/Error.jsx';
 import BlogPost from "./pages/BlogPost/BlogPost.jsx";
 import NavLinkItem from "./components/NavLink/NavLinkItem.jsx";
+import {ToastContainer} from "react-toastify";
 
 function App() {
     return (
@@ -27,6 +28,7 @@ function App() {
                 <Route path="/error" element={<Error/>}/>
                 <Route path="/blogpost/:id" element={<BlogPost/>}/>
             </Routes>
+            <ToastContainer/>
             <footer className="footer">
                 <img src={footerLogo} alt="Logo" className="footer-logo"/>
             </footer>

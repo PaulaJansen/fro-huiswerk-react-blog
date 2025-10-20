@@ -6,7 +6,7 @@ function OverviewBlogs() {
 
     return (
         <>
-            <h1>Bekijk alle {blogs.length} blogs</h1>
+            <h2>Bekijk alle {blogs.length} blogs</h2>
             <section className="overview-wrapper">
                 {blogs.map((blog) => (
                     <OverviewCard
