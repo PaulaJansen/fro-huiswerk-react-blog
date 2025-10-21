@@ -55,3 +55,7 @@ p {
   font-weight: 600;
   text-decoration: none;
 }
+
+.error-message {
+  color: red;
+}

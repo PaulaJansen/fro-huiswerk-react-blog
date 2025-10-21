@@ -9,6 +9,7 @@ import Error from './pages/Error/Error.jsx';
 import BlogPost from "./pages/BlogPost/BlogPost.jsx";
 import NavLinkItem from "./components/NavLink/NavLinkItem.jsx";
 import {ToastContainer} from "react-toastify";
+import BlogPosted from "./pages/BlogPosted/BlogPosted.jsx";
 
 function App() {
     return (
@@ -27,6 +28,7 @@ function App() {
                 <Route path="/new-blog" element={<NewBlog/>}/>
                 <Route path="/error" element={<Error/>}/>
                 <Route path="/blogpost/:id" element={<BlogPost/>}/>
+                <Route path="/new-blog-posted/:id" element={<BlogPosted/>}/>
             </Routes>
             <ToastContainer/>
             <footer className="footer">

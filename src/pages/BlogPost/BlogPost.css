@@ -18,3 +18,7 @@
 .clock-icon {
     width: 20px;
 }
+
+.blog-wrapper .button-secondary {
+    align-self: flex-end;
+}

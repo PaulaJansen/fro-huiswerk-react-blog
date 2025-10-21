@@ -1,5 +1,8 @@
 import './Home.css';
 import logo from "../../assets/logo-white.png";
+
+// Deel 2 opdracht 1 uitgegrijsd:
+
 import Button from "../../components/Button/Button.jsx";
 import axios from "axios";
 

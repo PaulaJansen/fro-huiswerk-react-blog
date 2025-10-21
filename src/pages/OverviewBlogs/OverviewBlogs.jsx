@@ -1,8 +1,8 @@
 import './OverviewBlogs.css';
-import blogs from '../../constants/data.json';
 import OverviewCard from "../../components/OverviewCard/OverviewCard.jsx";
 import {useEffect, useState} from "react";
 import axios from "axios";
+import Spinner from "../../components/Spinner/Spinner.jsx";
 
 function OverviewBlogs() {
 
@@ -13,7 +13,7 @@ function OverviewBlogs() {
     useEffect(() => {
         async function fetchBlogs() {
             try {
-                const response = await axios.get( "https://novi-backend-api-wgsgz.ondigitalocean.app/api/blogposts",
+                const response = await axios.get("https://novi-backend-api-wgsgz.ondigitalocean.app/api/blogposts",
                     {
                         headers: {
                             "novi-education-project-id": "dba8566a-9dd8-4a2a-b717-eaaae3e286b4",
@@ -21,21 +21,27 @@ function OverviewBlogs() {
                     });
                 setBlogs(response.data);
                 console.log(response.data);
-            } catch(e) {
+            } catch (e) {
                 setError("Blogs ophalen mislukt :(");
             } finally {
                 setLoading(false);
             }
         }
+
         fetchBlogs();
     }, []);
 
     if (loading) {
-        return <p>Blogs worden geladen...</p>;
+        return (
+            <>
+                <Spinner className="spinner-default" />
+                <p>Blogs worden geladen...</p>
+            </>
+        );
     }
 
     if (error) {
-        return <p>{error}</p>;
+        return <p className="error-message">{error}</p>;
     }
 
     if (blogs.length === 0) {

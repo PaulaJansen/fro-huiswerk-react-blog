@@ -2,6 +2,11 @@
     background-color: var(--color-white);
     padding: 2rem;
     width: 30vw;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+
 }
 
 .card-author {
