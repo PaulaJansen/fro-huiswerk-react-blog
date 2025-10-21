@@ -1,0 +1,20 @@
+.input-field-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.input-field-default {
+    height: 3rem;
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+    border-radius: 5px;
+}
+
+.input-field-textarea {
+    height: 10rem;
+    resize: vertical;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
